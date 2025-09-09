@@ -45,9 +45,22 @@
 
 :root {
     --light-yellowish-green: #F5F7EC;
+    --faded-olive-green: #727363;
 }
 
 body {
     background-color: var(--light-yellowish-green);
+}
+
+.header-content {
+  text-align: justify;
+}
+
+.material-symbols-outlined {
+  color: var(--faded-olive-green);
+}
+
+.logo-header {
+  width: 100px;
 }
 
