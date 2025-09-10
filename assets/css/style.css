@@ -106,7 +106,7 @@ header {
 .decorative-back-img-forest {
   width: auto;
   height: 180px;
-  background-image: url(/assets/images/wallpaper-forest.webp);
+  background-image: url(../images/wallpaper-forest.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
