@@ -26,7 +26,8 @@
 @font-face {
   font-family: 'Open Sauce Sans';
   font-style: normal;
-  font-weight: 400; /* 400 é o peso para 'Regular' */
+  font-weight: 400;
+  /* 400 é o peso para 'Regular' */
   font-display: swap;
   /* Ajuste o caminho para o arquivo da sua fonte regular */
   src: url('../fonts/Open_Sauce/OpenSauceSans-Regular.ttf') format('truetype');
@@ -41,26 +42,88 @@
   /* Ajuste o caminho para o arquivo da sua fonte regular */
   src: url('../fonts/Open_Sauce/OpenSauceSans-Bold.ttf') format('truetype');
 }
+
 /* ----- */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
-    --light-yellowish-green: #F5F7EC;
-    --faded-olive-green: #727363;
+  --light-yellowish-green-light: #F5F7EC;
+  --light-yellowish-green: #ECF1D4;
+  --faded-olive-green: #727363;
 }
 
 body {
-    background-color: var(--light-yellowish-green);
+  background-color: var(--light-yellowish-green-light);
+  font-family: Google Sans Code;
+}
+
+/*Estilo Header*/
+header {
+  position: fixed;
+  background-color: var(--light-yellowish-green);
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 8px 35px;
+  z-index: 1;
 }
 
 .header-content {
-  text-align: justify;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
 }
 
 .material-symbols-outlined {
   color: var(--faded-olive-green);
+  padding: 0 10px;
+  
+}
+
+.decorative-img-header-three-globes {
+  height: 60px;
 }
 
 .logo-header {
-  width: 100px;
+  width: 120px;
 }
 
+/*Estlo Conteudo Inicial*/
+.initial-content {
+  padding: 105px 35px 25px 35px;
+  text-align: center;
+  justify-content: center;
+}
+
+.decorative-back-img-forest {
+  width: auto;
+  height: 180px;
+  background-image: url(/assets/images/wallpaper-forest.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 35px 35px 20px 20px;
+}
+
+.initial-content p {
+  padding: 15px 0;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: Open Sauce Sans;
+  color: var(--faded-olive-green);
+  text-align: justify;
+}
+
+.decorative-img-globe {
+  width: 230px;
+  padding: 25px 0;
+
+}
