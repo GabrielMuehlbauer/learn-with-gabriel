@@ -60,6 +60,11 @@ b {
   --faded-olive-green: #727363;
 }
 
+::selection {
+  background-color: var(--faded-olive-green);
+  color: var(--light-yellowish-green-light);
+}
+
 body {
   background-color: var(--light-yellowish-green-light);
   font-family: Google Sans Code;
