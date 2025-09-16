@@ -1,7 +1,9 @@
 /*
     -----IMPORTANDO AS FONTES-----
 */
-
+b {
+  font-weight: 700;
+}
 /* IMPORTANDO A FONTE "Google Sans Code"*/
 /* Para o estilo normal, com todos os pesos de 300 a 800 */
 @font-face {
@@ -54,6 +56,7 @@
 :root {
   --light-yellowish-green-light: #F5F7EC;
   --light-yellowish-green: #ECF1D4;
+  --pastel-grayish-yellowish-green: #cdd9a0;
   --faded-olive-green: #727363;
 }
 
@@ -126,4 +129,29 @@ header {
   width: 230px;
   padding: 25px 0;
 
+}
+
+/*Estilo Apresentação*/
+.apresentation-content {
+  padding: 40px 35px 40px 35px;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--light-yellowish-green);
+}
+
+.apresentation-content p {
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Google Sans Code;
+  color: var(--faded-olive-green);
+  text-align: justify;
+}
+
+.apresentation-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  margin-top: 25px;
+  background-color: var(--pastel-grayish-yellowish-green);
 }
