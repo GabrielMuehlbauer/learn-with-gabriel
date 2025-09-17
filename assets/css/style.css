@@ -47,6 +47,7 @@ b {
 
 /* ----- */
 
+/* Configurações Iniciais */
 *,
 *::before,
 *::after {
@@ -64,6 +65,7 @@ b {
   background-color: var(--faded-olive-green);
   color: var(--light-yellowish-green-light);
 }
+/* ----- */
 
 body {
   background-color: var(--light-yellowish-green-light);
@@ -103,6 +105,7 @@ header {
 .logo-header {
   width: 120px;
 }
+/* ----- */
 
 /*Estlo Conteudo Inicial*/
 .initial-content {
@@ -133,10 +136,10 @@ header {
 .decorative-img-globe {
   width: 230px;
   padding: 25px 0;
-
 }
+/* ----- */
 
-/*Estilo Apresentação*/
+/* Estilo Apresentação */
 .apresentation-content {
   padding: 40px 35px 40px 35px;
   text-align: center;
@@ -159,4 +162,25 @@ header {
   border-radius: 35px;
   margin-top: 25px;
   background-color: var(--pastel-grayish-yellowish-green);
+}
+/* ----- */
+
+/* Estilo Propósito */
+.purpose {
+  padding: 40px 35px 40px 35px;
+  text-align: center;
+}
+
+.purpose h2 {
+  font-size: 50px;
+  text-align: left;
+}
+
+.purpose p {
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Google Sans Code;
+  color: var(--faded-olive-green);
+  text-align: justify;
 }
