@@ -58,7 +58,9 @@ b {
   --light-yellowish-green-light: #F5F7EC;
   --light-yellowish-green: #ECF1D4;
   --pastel-grayish-yellowish-green: #cdd9a0;
+  --faded-yellowish-green: #b4bf8e;
   --faded-olive-green: #727363;
+  --faded-brown: #595548;
 }
 
 ::selection {
@@ -152,7 +154,7 @@ header {
   font-size: 20px;
   font-weight: 400;
   font-family: Google Sans Code;
-  color: var(--faded-olive-green);
+  color: var(--faded-brown);
   text-align: justify;
 }
 
@@ -172,8 +174,12 @@ header {
 }
 
 .purpose h2 {
+  font-family: Open Sauce Sans;
+  font-weight: 700;
   font-size: 50px;
+  color: var(--faded-yellowish-green);
   text-align: left;
+  margin-bottom: 25px;
 }
 
 .purpose p {
@@ -181,6 +187,16 @@ header {
   font-size: 20px;
   font-weight: 400;
   font-family: Google Sans Code;
-  color: var(--faded-olive-green);
+  color: var(--faded-brown);
   text-align: justify;
+}
+
+.decorative-img-star-globe {
+  background-color: var(--faded-yellowish-green);
+  border-radius: 35px;
+  margin: 25px 0;
+}
+
+.decorative-img-star-globe img {
+  width: 165px;
 }
