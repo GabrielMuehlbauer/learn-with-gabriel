@@ -109,6 +109,22 @@ header {
 }
 /* ----- */
 
+/* Estilo Menu Lateral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -400px; /* Esconde o menu inicialmente */
+  width: 400px;
+  height: 100%;
+  background-color: var(--light-yellowish-green-light);
+  border: 1px solid var(--light-yellowish-green);
+  border-radius: 0 35px 35px 0;
+  transition: left 0.3s ease; /* Adiciona uma transição suave */
+}
+.side-menu.open {
+  left: 0; /* Mostra o menu quando a classe 'open' está presente */
+}
+
 /*Estlo Conteudo Inicial*/
 .initial-content {
   padding: 105px 35px 25px 35px;
