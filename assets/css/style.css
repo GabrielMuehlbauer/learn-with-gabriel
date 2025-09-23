@@ -55,6 +55,7 @@ b {
 }
 
 :root {
+  --light-gray-light: #FAFAFA;
   --light-yellowish-green-light: #F5F7EC;
   --light-yellowish-green: #ECF1D4;
   --pastel-grayish-yellowish-green: #cdd9a0;
@@ -128,6 +129,50 @@ header {
 }
 .side-menu.open {
   left: 0; /* Mostra o menu quando a classe 'open' está presente */
+}
+
+.side-menu-content {
+  padding: 35px 25px;
+}
+
+.side-menu-content h2 {
+  font-family: Open Sauce Sans;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--faded-yellowish-green);
+  margin-bottom: 25px;
+}
+
+.session-side-menu {
+  margin-bottom: 20px;
+  background-color: var(--light-gray-light);
+  border-radius: 25px;
+  padding: 20px;
+  border: 1px solid var(--light-yellowish-green);
+}
+
+.session-side-menu p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--faded-olive-green);
+}
+
+.session-side-menu a {
+  display: flex;
+  border: 1px solid var(--faded-olive-green);
+  padding: 12px;
+  border-radius: 15px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--faded-olive-green);
+  margin: 10px 8px;
+  transition: color 0.2s ease, background-color 0.3s ease;
+}
+
+.session-side-menu a:hover {
+  background-color: var(--light-yellowish-green-light);
 }
 
 /*Estlo Conteudo Inicial*/
