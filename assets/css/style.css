@@ -4,6 +4,7 @@
 b {
   font-weight: 700;
 }
+
 /* IMPORTANDO A FONTE "Google Sans Code"*/
 /* Para o estilo normal, com todos os pesos de 300 a 800 */
 @font-face {
@@ -68,12 +69,14 @@ b {
   background-color: var(--faded-olive-green);
   color: var(--light-yellowish-green-light);
 }
+
 /* ----- */
 
 body {
   background-color: var(--light-yellowish-green-light);
   font-family: Google Sans Code;
 }
+
 
 /*Estilo Header*/
 header {
@@ -113,34 +116,40 @@ header {
 .logo-header {
   width: 120px;
 }
+
 /* ----- */
 
 /* Estilo Menu Lateral */
 .side-menu {
   position: fixed;
   top: 0;
-  left: -400px; /* Esconde o menu inicialmente */
-  width: 400px;
+  left: -360px;
+  /* Esconde o menu inicialmente */
+  width: 360px;
   height: 100%;
   background-color: var(--light-yellowish-green-light);
   border: 1px solid var(--light-yellowish-green);
   border-radius: 0 35px 35px 0;
-  transition: left 0.3s ease; /* Adiciona uma transição suave */
+  transition: left 0.3s ease;
+  /* Adiciona uma transição suave */
 }
+
 .side-menu.open {
-  left: 0; /* Mostra o menu quando a classe 'open' está presente */
+  left: 0;
+  /* Mostra o menu quando a classe 'open' está presente */
 }
 
 .side-menu-content {
   padding: 35px 25px;
 }
 
-.side-menu-content h2 {
+.side-menu-content h2 , .side-menu-content a {
   font-family: Open Sauce Sans;
   font-weight: 700;
   font-size: 30px;
   color: var(--faded-yellowish-green);
   margin-bottom: 25px;
+  text-decoration: none;
 }
 
 .session-side-menu {
@@ -159,7 +168,8 @@ header {
 
 .session-side-menu a {
   display: flex;
-  border: 1px solid var(--faded-olive-green);
+  outline: 1px solid var(--faded-olive-green);
+  border: 2px solid transparent; 
   padding: 12px;
   border-radius: 15px;
   align-items: center;
@@ -168,11 +178,12 @@ header {
   font-weight: 500;
   color: var(--faded-olive-green);
   margin: 10px 8px;
-  transition: color 0.2s ease, background-color 0.3s ease;
+  transition: color 0.2s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
 .session-side-menu a:hover {
   background-color: var(--light-yellowish-green-light);
+  border: 2px solid var(--faded-yellowish-green);
 }
 
 /*Estlo Conteudo Inicial*/
@@ -192,54 +203,73 @@ header {
   border-radius: 35px 35px 20px 20px;
 }
 
-.initial-content p {
+.big-text {
+  display: flex;
+  justify-content: center;
+}
+
+.big-text p {
   padding: 15px 0;
   font-size: 50px;
   font-weight: 600;
   font-family: Open Sauce Sans;
   color: var(--faded-olive-green);
   text-align: justify;
+  line-height: 50px;
+  max-width: 500px;
 }
 
 .decorative-img-globe {
   width: 230px;
   padding: 25px 0;
 }
+
 /* ----- */
 
 /* Estilo Apresentação */
-.apresentation-content {
+.apresentation {
   padding: 40px 35px 40px 35px;
   text-align: center;
   justify-content: center;
   background-color: var(--light-yellowish-green);
 }
 
+.apresentation-content {
+  display: flex;
+  justify-content: center;
+}
+
 .apresentation-content p {
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   font-family: Google Sans Code;
   color: var(--faded-brown);
   text-align: justify;
+  line-height: 25px;
+  max-width: 500px;
 }
 
-.apresentation-content video {
+.apresentation video {
   width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 35px;
   margin-top: 25px;
-  background-color: var(--pastel-grayish-yellowish-green);
 }
+
 /* ----- */
 
 /* Estilo Propósito */
 .purpose {
   padding: 40px 35px 40px 35px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.purpose h2 {
+.purpose-content h2 {
+  display: block;
   font-family: Open Sauce Sans;
   font-weight: 700;
   font-size: 50px;
@@ -248,24 +278,28 @@ header {
   margin-bottom: 25px;
 }
 
-.purpose p {
+.purpose-content p {
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   font-family: Google Sans Code;
   color: var(--faded-brown);
   text-align: justify;
+  line-height: 25px;
+  max-width: 500px;
 }
 
 .decorative-img-star-globe {
   background-color: var(--faded-yellowish-green);
   border-radius: 35px;
-  margin: 25px 0;
+  text-align: center;
+  margin: 0 35px 45px 35px;
 }
 
 .decorative-img-star-globe img {
   width: 165px;
 }
+
 /* ----- */
 
 /* Estilo Footer */
@@ -278,13 +312,15 @@ footer {
 
 .footer-content {
   color: var(--light-yellowish-green-light);
+  text-align: center;
 }
 
 .footer-content p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   font-family: Google Sans Code;
   text-align: center;
+  color: var(--light-yellowish-green-light);
 }
 
 .footer-content h3 {
@@ -293,6 +329,7 @@ footer {
   font-family: Open Sauce Sans;
   text-align: center;
   margin-bottom: 30px;
+  color: var(--light-yellowish-green-light);
 }
 
 .copyright {
@@ -300,6 +337,87 @@ footer {
   font-size: 14px;
   font-weight: 400;
   font-family: Google Sans Code;
+  text-align: center
+}
+
+
+/*=====  ESTILO DAS PÁGINAS DE FRONT END E BACK END  =====*/
+.front-content, .back-content {
+  padding: 105px 35px 25px 35px;
   text-align: center;
-  margin-top: 30px;
+  justify-content: center;
+}
+
+.header-page {
+  display: flex;
+  justify-content: center;
+  background-color: var(--pastel-grayish-yellowish-green);
+  padding: 40px;
+  border-radius: 35px 35px 20px 20px;
+  margin-bottom: 40px;
+}
+
+.header-page h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--light-yellowish-green-light);
+  font-family: Open Sauce Sans;
+  text-align: left;
+  width: 200px;
+}
+
+.front-content p, .back-content p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Google Sans Code;
+    color: var(--faded-brown);
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 25px;
+    max-width: 500px;
+}
+
+.initial-front-content , .initial-back-content {
+  display: flex;
+  justify-content: center;
+}
+
+.posts-section {
+  display: flex;
+  justify-content: center;
+}
+
+.posts-section-content {
+  padding: 35px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post {
+  background-color: var(--light-gray-light);
+  border-radius: 35px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 500px;
+  outline: 1px solid var(--light-yellowish-green); 
+  border: 2px solid transparent; 
+  transition: border 0.3s ease;
+}
+
+.post:hover {
+  border: 2px solid var(--light-yellowish-green);
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.post-content h1 {
+  font-size: 30px;
+  font-family: Open Sauce Sans;
+  font-weight: 700;
+  color: var(--faded-yellowish-green);
+  text-align: left;
+  margin-bottom: 20px;
 }
