@@ -1,423 +1,120 @@
-/*
-    -----IMPORTANDO AS FONTES-----
-*/
-b {
-  font-weight: 700;
-}
-
-/* IMPORTANDO A FONTE "Google Sans Code"*/
-/* Para o estilo normal, com todos os pesos de 300 a 800 */
-@font-face {
-  font-family: 'Google Sans Code';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300 800;
-  src: url('../fonts/Google_Sans_Code/GoogleSansCode-VariableFont_wght.ttf') format('truetype');
-}
-
-/* Para o estilo itálico, com todos os pesos de 300 a 800 */
-@font-face {
-  font-family: 'Google Sans Code';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 300 800;
-  src: url('../fonts/Google_Sans_Code/GoogleSansCode-Italic-VariableFont_wght.ttf') format('truetype');
-}
-
-/*IMPORTANDO A FONTE "Open Sauce Sans"*/
-/* Regular */
-@font-face {
-  font-family: 'Open Sauce Sans';
-  font-style: normal;
-  font-weight: 400;
-  /* 400 é o peso para 'Regular' */
-  font-display: swap;
-  /* Ajuste o caminho para o arquivo da sua fonte regular */
-  src: url('../fonts/Open_Sauce/OpenSauceSans-Regular.ttf') format('truetype');
-}
-
-/* Bold */
-@font-face {
-  font-family: 'Open Sauce Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  /* Ajuste o caminho para o arquivo da sua fonte regular */
-  src: url('../fonts/Open_Sauce/OpenSauceSans-Bold.ttf') format('truetype');
-}
-
-/* ----- */
-
-/* Configurações Iniciais */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 :root {
-  --light-gray-light: #FAFAFA;
-  --light-yellowish-green-light: #F5F7EC;
-  --light-yellowish-green: #ECF1D4;
-  --pastel-grayish-yellowish-green: #cdd9a0;
-  --faded-yellowish-green: #b4bf8e;
-  --faded-olive-green: #727363;
-  --faded-brown: #595548;
+  /* Dark Tones */
+  --color-dark-gray: #353535;
+  --color-deep-navy: #222E47;
+  --color-muted-blue: #394A6F;
+
+  /* Light & Accent Tones */
+  --color-soft-blue: #9BC3FF;
+  --color-pale-blue: #CEE2FF;
+
+  /* Neutrals / Backgrounds */
+  --color-grayish-white: #F3F6F8;
+  --color-almost-white: #FAFAFA;
+}
+
+/* Importação das Fontes */
+@font-face {
+  font-family: "Open Sauce Two";
+  src: url(../fonts/Open_Sauce/OpenSauceTwo-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Open Sauce Two";
+  src: url(../fonts/Open_Sauce/OpenSauceTwo-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sauce Two";
+  src: url(../fonts/Open_Sauce/OpenSauceTwo-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Open Sauce Two";
+  src: url(../fonts/Open_Sauce/OpenSauceTwo-ExtraBold.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(../fonts/Neue_Machina/NeueMachina-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(../fonts/Neue_Machina/NeueMachina-Ultrabold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url(../fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf);
+  font-weight: 100 900;
+}
+
+/* Reset básico para o corpo do blog */
+body {
+  background-color: var(--color-grayish-white);
+  color: var(--color-dark-gray);
+  font-family: "Open Sauce Two", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+b {
+  font-weight: 900;
 }
 
 ::selection {
-  background-color: var(--faded-olive-green);
+  background-color: var(--color-pale-blue);
   color: var(--light-yellowish-green-light);
 }
 
 /* ----- */
 
-body {
-  background-color: var(--light-yellowish-green-light);
-  font-family: Google Sans Code;
-}
-
-
-/*Estilo Header*/
-header {
-  position: fixed;
-  background-color: var(--light-yellowish-green);
-  width: 100%;
-  height: 80px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  padding: 8px 35px;
-  z-index: 1;
-}
-
-.header-content {
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  width: 100%;
-}
-
-.material-symbols-outlined {
-  color: var(--faded-olive-green);
-  padding: 10px 10px;
-  border-radius: 25px;
-  transition: background-color 0.1s ease;
-}
-
-.material-symbols-outlined:hover {
-  background-color: var(--pastel-grayish-yellowish-green);
-}
-
-.decorative-img-header-three-globes {
-  height: 60px;
-}
-
-.logo-header {
-  width: 120px;
-}
-
-/* ----- */
-
-/* Estilo Menu Lateral */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -360px;
-  /* Esconde o menu inicialmente */
-  width: 360px;
-  height: 100%;
-  background-color: var(--light-yellowish-green-light);
-  border: 1px solid var(--light-yellowish-green);
-  border-radius: 0 35px 35px 0;
-  transition: left 0.3s ease;
-  /* Adiciona uma transição suave */
-}
-
-.side-menu.open {
-  left: 0;
-  /* Mostra o menu quando a classe 'open' está presente */
-}
-
-.side-menu-content {
-  padding: 35px 25px;
-}
-
-.side-menu-content h2 , .side-menu-content a {
-  font-family: Open Sauce Sans;
-  font-weight: 700;
-  font-size: 30px;
-  color: var(--faded-yellowish-green);
-  margin-bottom: 25px;
-  text-decoration: none;
-}
-
-.session-side-menu {
-  margin-bottom: 20px;
-  background-color: var(--light-gray-light);
-  border-radius: 25px;
-  padding: 20px;
-  border: 1px solid var(--light-yellowish-green);
-}
-
-.session-side-menu p {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--faded-olive-green);
-}
-
-.session-side-menu a {
-  display: flex;
-  outline: 1px solid var(--faded-olive-green);
-  border: 2px solid transparent; 
-  padding: 12px;
-  border-radius: 15px;
-  align-items: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--faded-olive-green);
-  margin: 10px 8px;
-  transition: color 0.2s ease, background-color 0.3s ease, border 0.3s ease;
-}
-
-.session-side-menu a:hover {
-  background-color: var(--light-yellowish-green-light);
-  border: 2px solid var(--faded-yellowish-green);
-}
-
-/*Estlo Conteudo Inicial*/
-.initial-content {
-  padding: 105px 35px 25px 35px;
+.blog-header {
+  background-color: var(--color-pale-blue);
+  padding: 20px 20px 40px 20px;
+  position: relative;
   text-align: center;
-  justify-content: center;
-}
-
-.decorative-back-img-forest {
-  width: auto;
-  height: 180px;
-  background-image: url(../images/wallpaper-forest.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 35px 35px 20px 20px;
-}
-
-.big-text {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.big-text p {
-  padding: 15px 0;
-  font-size: 50px;
+.menu-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--color-almost-white);
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-dark-gray);
+}
+
+.header-titles {
+  margin-top: 60px; /* Espaço para não encavalar com o botão */
+}
+
+.header-titles h1 {
+  font-family: "Open Sauce Two", sans-serif;
   font-weight: 600;
-  font-family: Open Sauce Sans;
-  color: var(--faded-olive-green);
-  text-align: justify;
-  line-height: 50px;
-  max-width: 500px;
-}
-
-.decorative-img-globe {
-  width: 230px;
-  padding: 25px 0;
-}
-
-/* ----- */
-
-/* Estilo Apresentação */
-.apresentation {
-  padding: 40px 35px 40px 35px;
-  text-align: center;
-  justify-content: center;
-  background-color: var(--light-yellowish-green);
-}
-
-.apresentation-content {
-  display: flex;
-  justify-content: center;
-}
-
-.apresentation-content p {
-  padding: 15px 0;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Google Sans Code;
-  color: var(--faded-brown);
-  text-align: justify;
-  line-height: 25px;
-  max-width: 500px;
-}
-
-.apresentation video {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 35px;
-  margin-top: 25px;
-}
-
-/* ----- */
-
-/* Estilo Propósito */
-.purpose {
-  padding: 40px 35px 40px 35px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-
-.purpose-content h2 {
-  display: block;
-  font-family: Open Sauce Sans;
-  font-weight: 700;
-  font-size: 50px;
-  color: var(--faded-yellowish-green);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--color-dark-gray);
+  margin: 0;
+  letter-spacing: -1px;
   text-align: left;
-  margin-bottom: 25px;
 }
 
-.purpose-content p {
-  padding: 15px 0;
-  font-size: 16px;
+.header-titles h2 {
+  font-family: "Neue Machina", monospace; /* Ajuste conforme a fonte exata do subtítulo */
   font-weight: 400;
-  font-family: Google Sans Code;
-  color: var(--faded-brown);
-  text-align: justify;
-  line-height: 25px;
-  max-width: 500px;
-}
-
-.decorative-img-star-globe {
-  background-color: var(--faded-yellowish-green);
-  border-radius: 35px;
-  text-align: center;
-  margin: 0 35px 45px 35px;
-}
-
-.decorative-img-star-globe img {
-  width: 165px;
-}
-
-/* ----- */
-
-/* Estilo Footer */
-footer {
-  background-color: var(--faded-brown);
-  padding: 50px;
-  text-align: center;
-  justify-content: center;
-}
-
-.footer-content {
-  color: var(--light-yellowish-green-light);
-  text-align: center;
-}
-
-.footer-content p {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Google Sans Code;
-  text-align: center;
-  color: var(--light-yellowish-green-light);
-}
-
-.footer-content h3 {
-  font-size: 25px;
-  font-weight: 700;
-  font-family: Open Sauce Sans;
-  text-align: center;
-  margin-bottom: 30px;
-  color: var(--light-yellowish-green-light);
-}
-
-.copyright {
-  color: var(--light-yellowish-green-light);
-  font-size: 14px;
-  font-weight: 400;
-  font-family: Google Sans Code;
-  text-align: center
-}
-
-
-/*=====  ESTILO DAS PÁGINAS DE FRONT END E BACK END  =====*/
-.front-content, .back-content {
-  padding: 105px 35px 25px 35px;
-  text-align: center;
-  justify-content: center;
-}
-
-.header-page {
-  display: flex;
-  justify-content: center;
-  background-color: var(--pastel-grayish-yellowish-green);
-  padding: 40px;
-  border-radius: 35px 35px 20px 20px;
-  margin-bottom: 40px;
-}
-
-.header-page h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--light-yellowish-green-light);
-  font-family: Open Sauce Sans;
-  text-align: left;
-  width: 200px;
-}
-
-.front-content p, .back-content p {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: Google Sans Code;
-    color: var(--faded-brown);
-    text-align: justify;
-    margin-bottom: 10px;
-    line-height: 25px;
-    max-width: 500px;
-}
-
-.initial-front-content , .initial-back-content {
-  display: flex;
-  justify-content: center;
-}
-
-.posts-section {
-  display: flex;
-  justify-content: center;
-}
-
-.posts-section-content {
-  padding: 35px;
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.post {
-  background-color: var(--light-gray-light);
-  border-radius: 35px;
-  padding: 20px;
-  min-width: 300px;
-  max-width: 500px;
-  outline: 1px solid var(--light-yellowish-green); 
-  border: 2px solid transparent; 
-  transition: border 0.3s ease;
-}
-
-.post:hover {
-  border: 2px solid var(--light-yellowish-green);
-}
-
-.post-content {
-  padding: 10px;
-}
-
-.post-content h1 {
-  font-size: 30px;
-  font-family: Open Sauce Sans;
-  font-weight: 700;
-  color: var(--faded-yellowish-green);
-  text-align: left;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--color-dark-gray);
+  margin-top: 10px;
 }

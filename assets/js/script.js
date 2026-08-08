@@ -1,25 +1,21 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-    // Pega o botão do menu e o menu lateral no html
-    const menuButton = document.getElementById('menu-button');
-    const sideMenu = document.querySelector('.side-menu');
+const API_KEY = 'SUA_API_KEY_AQUI';
+const BLOG_ID = 'SEU_BLOG_ID_AQUI';
+const API_URL = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`;
 
-    // Quando o botão do menu for clicado
-    menuButton.addEventListener('click', function (event) {
-        event.preventDefault(); // Impede o comportamento padrão do link
-        // Adiciona ou remove a classe 'open' do menu lateral
-        sideMenu.classList.toggle('open');
+async function fetchBlogPosts() {
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) throw new Error('Erro ao buscar as postagens');
+    
+    const data = await response.json();
+    renderPosts(data.items);
+  } catch (error) {
+    console.error('Falha na conexão com o Blogger:', error);
+  }
+}
 
-    });
+function renderPosts(posts) {
+  // Lógica para injetar o HTML das postagens no DOM
+}
 
-    // Quando um clique ocorrer no documento
-    document.addEventListener('click', function (event) {
-        const isClickInsideMenu = sideMenu.contains(event.target); // Verifica se o clique foi dentro do menu
-        const isClickInsideButton = menuButton.contains(event.target); // Verifica se o clique foi dentro do botão
-
-        // Se o clique não foi dentro do menu nem do botão, e o menu está aberto
-        if (!isClickInsideMenu && !isClickInsideButton && sideMenu.classList.contains('open')) {
-            sideMenu.classList.remove('open'); // Fecha o menu
-        }
-    });
-});
+fetchBlogPosts();
