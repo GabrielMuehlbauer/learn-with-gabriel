@@ -118,3 +118,36 @@ b {
   color: var(--color-dark-gray);
   margin-top: 10px;
 }
+
+.main-index {
+  padding: 35px 35px;
+  color: var(--color-dark-gray);
+}
+
+.welcome-session {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-session h2 {
+  font-family: "Neue Machina", monospace;
+  font-size: 1.7rem;
+  text-align: left;
+  max-width: 400px;
+  font-weight: 400;
+  -webkit-text-stroke: 1px var(--color-dark-gray);
+  color: var(--color-dark-gray);
+}
+
+.welcome-session p {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 400px;
+  text-align: justify;
+  line-height: 1.4rem;
+}
